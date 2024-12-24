@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh History</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('./R.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+        /* Container for the slider */
+        .slider-container {
+            position: relative;
+            width: 100%;  /* Set width to 100% to make it responsive */
+            height: 400px; /* Adjust the height to fit smaller screens */
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        /* Wrapper for the images */
+        .slider-images {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Style for each slide with fade animation */
+        .fade {
+            animation: fade 12s infinite;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Keyframes for fade transition */
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            75% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Individual slide animation delays */
+        .slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slide:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .slide:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        .slide:nth-child(4) {
+            animation-delay: 12s;
+        }
+
+        .slide:nth-child(5) {
+            animation-delay: 16s;
+        }
+
+        .slide:nth-child(6) {
+            animation-delay: 20s;
+        }
+
+        .slide:nth-child(7) {
+            animation-delay: 24s;
+        }
+
+        /* Mobile-friendly design */
+        @media screen and (max-width: 768px) {
+            .slider-container {
+                height: 400px; /* Adjust height for smaller screens */
+            }
+
+            .text-center {
+                padding: 15px;
+            }
+
+            .header {
+                padding: 10px 15px;
+            }
+
+            .navigation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navigation ul {
+                padding: 0;
+                display: block;
+                text-align: center;
+            }
+
+            .navigation li {
+                margin: 10px 0;
+            }
+
+            .hero-text {
+                font-size: 24px; /* Reduce font size for smaller screens */
+            }
+
+            .timeline-section,
+            .books-section,
+            .journey-section {
+                padding: 15px;
+            }
+
+            .timeline-section img,
+            .timeline-section video {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-green-300 via-red-400 to-teal-700 text-white">
+
+    <header class="bg-green-800 text-white py-4 shadow-lg" style="background-image: url('./R.jpeg'); background-size: cover; background-position: center;">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Bangladesh History</h1>
+            <nav class="hidden md:block navigation">
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="#timeline" class="hover:text-gray-300">Timeline</a></li>
+                    <li><a href="#books" class="hover:text-gray-300">Books</a></li>
+                    <li><a href="#journey" class="hover:text-gray-300">Journey</a></li>
+                </ul>
+            </nav>
+            <!-- Hamburger Menu for Mobile -->
+            <div class="md:hidden">
+                <button id="hamburger-btn" class="text-white focus:outline-none" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <ul class="flex flex-col space-y-4 p-4 bg-green-800 text-white">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#timeline" class="hover:text-gray-300">Timeline</a></li>
+                <li><a href="#books" class="hover:text-gray-300">Books</a></li>
+                <li><a href="#journey" class="hover:text-gray-300">Journey</a></li>
+            </ul>
+        </div>
+    </header>
+    
+
+    <main class="container mx-auto py-8">
+        <!-- Hero Section -->
+        <section class="text-center bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+            <h2 class="text-5xl font-bold text-red-600 hero-text">Explore the Rich History of Bangladesh</h2>
+            <p class="text-gray-700 mt-6">Discover Bangladesh's journey from its ancient roots to its modern achievements, highlighting key milestones and cultural triumphs.</p>
+
+            <!-- Hero Section with Image Slider (Fade Transition) -->
+            <section class="slider-container mt-12">
+                <div class="slider-images">
+                    <div class="slide fade">
+                        <img src="./History-Of-Bangladesh.jpg" alt="Image 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slide fade">
+                        <img src="./lang-mow-file.jpg" alt="Image 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slide fade">
+                        <img src="./unnamed.jpg" alt="Image 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slide fade">
+                        <img src="./1996_map.jpg" alt="Image 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slide fade">
+                        <img src="./ffaa.jpg" alt="Image 5" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slide fade">
+                        <img src="./ANI-20240322164707.jpg" alt="Image 6" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slide fade">
+                        <img src="./baby.jpeg" alt="Image 7" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </section>
+        
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="mt-12">
+            <h3 class="text-4xl font-semibold text-red-600 mb-6">Timeline</h3>
+            <div class="space-y-8">
+                <!-- Event 1 -->
+                <!-- Event 1 -->
+<div class="flex items-start space-x-4 bg-white text-gray-800 p-6 rounded-lg shadow-lg">
+    <div class="w-2 bg-green-800 h-full"></div>
+    <div class="flex">
+        <img src="./partition.webp" alt="Partition of India" class="mt-4 rounded-lg shadow-lg w-48 md:w-56 lg:w-64">
+        <div class="ml-4">
+            <h4 class="text-2xl font-bold">1947 - Partition of India</h4>
+<p class="text-gray-700">The Partition of India in 1947 was a monumental and tragic event that resulted in the creation of two independent nations: India and Pakistan. The partition was primarily based on religious differences, with India becoming a secular state with a Hindu majority, while Pakistan was created as a homeland for Muslims. East Bengal became East Pakistan, and West Punjab became West Pakistan. The main reason for the partition was the demand by the All-India Muslim League, led by Muhammad Ali Jinnah, for a separate state for Muslims. The League argued that Muslims would not be able to practice their religion freely or maintain their cultural identity in a predominantly Hindu India. The partition led to the mass migration of millions of people, with Hindus and Sikhs moving to India, and Muslims relocating to Pakistan. The migration was accompanied by horrific violence, communal riots, and widespread atrocities, causing the death of up to two million people. The partition also left the Kashmir region disputed, contributing to several wars and continuing tensions between India and Pakistan. The legacy of partition is still visible today in the political, social, and cultural divisions within the subcontinent.</p>
+<blockquote class="mt-4 text-gray-600 italic">
+    "The partition resulted in the largest mass migration in human history, as millions of people crossed borders in search of safety."
+</blockquote>
+<blockquote class="mt-4 text-gray-600 italic">
+    "The impact of the partition is still felt today, as the countries of India and Pakistan continue to deal with the legacy of this historical event."
+</blockquote>
+
+        </div>
+    </div>
+</div>
+
+<!-- Event 2 -->
+<div class="flex items-start space-x-4 bg-white text-gray-800 p-6 rounded-lg shadow-lg mt-6">
+    <div class="w-2 bg-green-800 h-full"></div>
+    <div class="flex">
+        <img src="./1971war-Collage.jpg" alt="Liberation War" class="mt-4 rounded-lg shadow-lg w-48 md:w-56 lg:w-64">
+        <div class="ml-4">
+            <h4 class="text-2xl font-bold">1971 - Liberation War</h4>
+<p class="text-gray-700">In 1971, Bangladesh achieved independence after a nine-month-long struggle known as the Liberation War. The conflict began following growing discontent over political, economic, and cultural differences between East Pakistan (now Bangladesh) and West Pakistan (now Pakistan). The situation escalated after the Awami League, led by Sheikh Mujibur Rahman, won a majority in the 1970 elections, but the Pakistani government, led by Yahya Khan, was unwilling to transfer power. On March 25, 1971, Pakistan launched a brutal military operation, Operation Searchlight, to suppress the people of East Pakistan, which led to widespread atrocities, including mass killings and the displacement of millions. The war saw the people of East Pakistan, supported by India, fighting against the Pakistani military forces. The conflict ended with the surrender of the Pakistani forces on December 16, 1971, marking the birth of the independent nation of Bangladesh. The Liberation War remains a defining moment in Bangladesh's history and its struggle for autonomy, freedom, and dignity.</p>
+<blockquote class="mt-4 text-gray-600 italic">
+    "The Liberation War of 1971 was a struggle for justice, self-determination, and the right to live with dignity."
+</blockquote>
+<blockquote class="mt-4 text-gray-600 italic">
+    "The victory in 1971 not only marked the birth of Bangladesh as an independent nation but also signified the triumph of the spirit of the people."
+</blockquote>
+
+        </div>
+    </div>
+</div>
+
+<!-- Event 3 -->
+<div class="flex items-start space-x-4 bg-white text-gray-800 p-6 rounded-lg shadow-lg mt-6">
+    <div class="w-2 bg-green-800 h-full"></div>
+    <div class="flex">
+        <img src="./motherlanguage.webp" alt="Language Movement" class="mt-4 rounded-lg shadow-lg w-48 md:w-56 lg:w-64">
+        <div class="ml-4">
+            <h4 class="text-2xl font-bold">1999 - UNESCO Recognition</h4>
+<p class="text-gray-700">In 1999, UNESCO officially declared February 21 as International Mother Language Day, a significant recognition of the importance of linguistic and cultural diversity worldwide. This date was chosen to honor the Language Movement martyrs of Bangladesh, who sacrificed their lives on February 21, 1952, while protesting the imposition of Urdu as the sole state language of East Pakistan (now Bangladesh). The protests turned into a tragic event where several students and activists were killed by police while demonstrating in Dhaka. The day has since become a symbol of the struggle for language rights and the preservation of cultural identity. International Mother Language Day is observed globally, raising awareness about the importance of mother languages in education, cultural expression, and communication, and promoting linguistic diversity and multilingualism.</p>
+<blockquote class="mt-4 text-gray-600 italic">
+    "Language is a key to preserving cultural heritage, and International Mother Language Day serves as a reminder of the sacrifices made for language rights."
+</blockquote>
+<blockquote class="mt-4 text-gray-600 italic">
+    "The recognition of February 21 by UNESCO is a tribute to the martyrs who fought for the right to speak their mother tongue."
+</blockquote>
+
+        </div>
+    </div>
+</div>
+
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section id="books" class="mt-12 bg-white text-gray-800 p-6 rounded-lg shadow-lg">
+            <h3 class="text-4xl font-semibold text-red-600">Books to Know Bangladesh's History</h3>
+            <div class="grid grid-cols-3 gap-6 mt-4">
+                <div class="text-center">
+                    <a href="https://www.rokomari.com/book/153083/a-history-of-bangladesh" target="_blank">
+                        <img src="./b1.jpeg" alt="A History of Bangladesh by Willem van Schendel" class="w-32 h-40 mx-auto mb-4">
+                        <p class="text-gray-700">A History of Bangladesh by Willem van Schendel</p>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <a href="https://www.rokomari.com/book/15138/muktijudde-noy-mash" target="_blank">
+                        <img src="./b2.jpg" alt="The Blood Telegram by Gary J. Bass" class="w-32 h-40 mx-auto mb-4">
+                        <p class="text-gray-700">মুক্তিযুদ্ধে নয় মাস</p>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <a href="https://www.rokomari.com/book/131666/history-of-the-emergence-of-independent-bangladesh" >
+                        <img src="./b4.jpg" alt="Another Book Title" class="w-32 h-40 mx-auto mb-4">
+                        <p class="text-gray-700">স্বাধীন বাংলাদেশের অভ্যুদয়ের ইতিহাস</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+<!-- 2024 Bangladesh Quota Reform Movement -->
+<section id="journey" class="mt-12 bg-white text-gray-800 p-6 rounded-lg shadow-lg">
+    <h3 class="text-4xl font-semibold text-red-600"> Bangladesh Quota Reform Movement(2024) - A Second Independence</h3>
+
+    <blockquote class="mt-4 text-gray-600 italic">
+        The 2024 Bangladesh Quota Reform Movement marked a significant chapter in the nation's journey towards equitable opportunities. Sparked by growing concerns over discrimination and lack of transparency in the quota system, this movement united students and youth across the country in a call for justice. It was not just a demand for fairer recruitment policies but a battle for the rights of the people, echoing the cries of independence heard in 1971.
+    </blockquote>
+
+    <!-- Image -->
+    <img src="image-15617-1721111135.jpg" alt="2024 Quota Reform Movement" class="mt-4 rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2 mx-auto">
+
+    <blockquote class="mt-6 text-gray-700 italic">
+        Frustration over the dominance of quotas in government job recruitment had been simmering for years. In 2024, rising unemployment and the perceived unfairness of the system ignited a nationwide protest. Demonstrations spread across campuses, demanding a shift to a merit-based system and transparency in administrative hiring. The movement gained momentum, with participants calling it a “second independence,” likening the fight for meritocracy to the fight for sovereignty in 1971.
+    </blockquote>
+
+    <blockquote class="mt-4 text-gray-700 italic">
+        Reflecting on the nation’s history, many participants of the 2024 movement drew inspiration from the courage and unity shown during the 1971 Liberation War. Although they did not witness 1971 firsthand, the spirit of sacrifice and the fight for justice resonated deeply. Protesters often quoted, <span class="italic text-gray-500">"We didn’t see 1971, but we see 2024"</span>, emphasizing that their generation was ready to fight for fairness and a better future. For them, achieving equality in public sector recruitment felt like a second struggle for independence, with the oppressive quota system representing a new form of injustice.
+    </blockquote>
+
+    <blockquote class="mt-4 text-gray-700 italic">
+        The movement gained global attention, with foreign organizations and human rights groups expressing solidarity with the students. Several international NGOs provided logistical support, including legal aid and communication tools, to ensure the safety of the protesters. Some foreign embassies in Dhaka issued statements urging peaceful resolution and emphasizing the importance of fairness and meritocracy in governance.
+    </blockquote>
+
+    <blockquote class="mt-4 text-gray-700 italic">
+        Behind the scenes, prominent Bangladeshi expatriates and student organizations abroad amplified the movement’s voice on international platforms. Social media campaigns initiated by students in the diaspora brought global awareness to the protesters' plight. Financial aid and supplies were sent to support the students, including medical kits for those injured in clashes with authorities.
+    </blockquote>
+
+    <blockquote class="mt-4 text-gray-700 italic">
+        Following weeks of protests and external pressure, the government introduced significant reforms to reduce quota allocations and prioritize merit-based recruitment. These changes have since improved transparency and created opportunities for skilled individuals to join the public sector.
+    </blockquote>
+
+    <blockquote class="mt-4 text-gray-700 italic">
+        The 2024 movement demonstrated that the spirit of 1971 lives on in every generation, reminding Bangladesh of its collective strength in the face of injustice. As the nation reflects on this modern struggle, it serves as a reminder that unity, resilience, and determination are timeless values. In this sense, the movement was not just a call for reform but a renewed fight for the freedoms and fairness that the country gained in 1971, marking a new chapter in Bangladesh’s continued quest for justice and equality.
+    </blockquote>
+
+    <!-- Source -->
+    <p class="text-gray-500 mt-6 italic">Sources: Compiled from news reports, international press coverage, and interviews with movement participants.</p>
+</section>
+
+
+    </main>
+
+    <footer class="bg-green-800 text-white py-4 mt-8" style="background-image: url('./R.jpeg'); background-size: cover; background-position: center;">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Bangladesh History. All rights reserved.</p>
+            <p>&copy; Developed by
+                <div class="mt-4">
+                    <a href="https://www.linkedin.com/in/cadmostafijur/" target="_blank" class="text-white hover:text-gray-300 mx-2">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://www.facebook.com/Cmostafijur" target="_blank" class="text-white hover:text-gray-300 mx-2">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+             </p>
+            
+        </div>
+    </footer>
+    
+    
+
+    <script>
+        // Toggle Mobile Menu
+        document.getElementById('hamburger-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
